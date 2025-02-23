@@ -4,6 +4,8 @@
     --color-text: #FFFFFF;
     --color-primario: #176B87;
     --color-secundario:#64CCC5;
+
+    --font-div: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 *{
@@ -19,18 +21,33 @@ body{
 /************************* HEADER ********************************************/
 
 header{
+    width: 95%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 1% 5px 2%;
+    border-bottom: 2px solid #176B87;
+    margin: 0 1em;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--color-fondo);
+
+    /*
+    position: fixed;
     display:flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1% 1% 1% 1%;
-    margin: 0 1%;
+    padding: 1% 1% 5px 2%;
+    margin: 0 1em;
     border-bottom: 2px solid #176B87;
     font-family: 'Courier New', Courier, monospace;
+    background-color: var(--color-fondo);
+    */
 }
 
 .logo img{
-    height: 70px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
     background: transparent;
     border: 2px solid #176B87;
     border-radius: 50%;
@@ -40,7 +57,7 @@ nav a{
     padding: 0 0.7em;
     color: var(--color-text);
     text-decoration: none;
-    font-size: 22px ;
+    font-size: 21px ;
 }
 
 nav a:hover{
@@ -64,8 +81,8 @@ nav a.button:hover{
 
 /*****************************************************************************************/
 
-main{
-    padding: 6% 16%;
+.container_presentacion{
+    padding: 12% 16%;
     display: flex;
     justify-content: center;
     justify-content:space-between;
@@ -108,6 +125,8 @@ h1 {
     width: 17%;
     color: var(--color-text);
     background-color: var(--color-primario);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
     padding: 12px 30px;
     margin-top: 1em;
     text-decoration: none;
@@ -138,7 +157,7 @@ h1 {
 h2{
     color: var(--color-text);
     padding: 2% 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--font-div);
     letter-spacing: 1px;
     font-size: 27px;
     border-top: 2px solid var(--color-primario);
@@ -158,29 +177,67 @@ h2{
     background-color: #023647;
 }
 
-.social__a:hover 
-{
-    transform: scale(1.1);
-    transition: .4s;
-}
-
-.social__a.facebook:hover{
+.social__a.facebook{
 
     background-color: #1877F2;
 }
 
-.social__a.instagram:hover{
+.social__a.instagram{
     background-color: #E4405F;
 }
 
-.social__a.whatsapp:hover{
+.social__a.whatsapp{
     background-color:#19af50 ;
 }
 
-.social__a.linkedin:hover{
+.social__a.linkedin{
     background-color: #0A66C2;
 }
 
-.social__a.github:hover{
+.social__a.github{
     background-color: #181717;
+}
+
+.social__a:hover 
+{
+    transform: scale(1.1);
+    transition: .4s;
+    background-color: var(--color-primario);
+}
+
+/******************** SOBRE MÍ ***************************************/
+
+.division{
+    display: flex;
+    justify-content: flex-end;
+
+}
+hr{
+    display: inline-flex;
+}
+
+h3{
+    color: var(--color-text);
+    padding: 5px 1.5em;
+    font-size: 2.5em;
+
+}
+
+.division {
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    flex-grow: 1; 
+    border: 1px solid white;
+}
+  
+h3 {
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    color: white; /* Color del texto */
+    font-size: 3em;
+    padding: 2px 1em;
+    font-family: var(--font-div);
+    font-weight: bold;
 }
